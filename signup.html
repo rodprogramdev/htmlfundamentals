@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGN UP</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+
+        /*Global Font-size set to root */
+/*WHY WE use and convert
+
+Why we use rem units in our project.
+We want to change all absolute pixel units to rem. 
+Why do we want to do that?
+
+We do this because we want an easy way to change all of the measurements on our page with one 
+simple setting. 
+
+For example when we hit a breakpoint to display our page on a smaller device screen. 
+
+When that happens we want a way to decrease all of hte measurements in our site at the same time.
+
+Instead of writing hundreds of lines of codes in the media queries we can just change one 
+globla setting. 
+
+And that is the GLOBAL FONT-SIZE.
+
+If you remember, the REM unit is always in relation to the root font-size. 
+
+If we set that root font-size we can then very easily change all the other measurements in our page
+
+
+We know that the root font-size is set in the html element.
+
+Why did we change the root font-size to 10px?
+
+We do 10px so that we can make our life a lot easier. 
+That is because, now we know that 1 rem is equals to exactly 10px.
+
+We now know that 1 rem is exactly the root font-size. 
+
+If 10px is now the root font-size, then 1 rem is 10px. 
+
+Now, it will be easy for us to replace all of the pixel units with rem, because all 
+we have to do is to divide all of the pixels by 10. 
+
+And that is our rem. 
+
+If our root font-size is 16px, then we will have to do a lot of calculations. 
+
+We don't want to do that, this is a very common technique to avoid that. 
+
+
+
+This will translate to the percentage given by the browser
+The default font-size if the user doesn't change anything is 16px. Which is the 
+absolute default. 
+
+
+That is the situation we are counting on. 
+*/
+        html {
+            font-size: 62.5%;
+                
+                
+                /*1rem is 10px > 62.5% 
+
+
+                    Huge advantage of using right,
+                    It is bad practice to set the font-size to pixels
+                    The problem is we are overriding the browser font-size setting 
+                    that the user can manually change in the settings: NaN;
+                    Many people usually do this, for example when they have bad 
+                    sights and they cannot see so good: NaN;
+                    Some people will increase the default font-size of their browser: NaN;
+                    If we set the font to 10px like we did here, we are removing the 
+                    ability for these people  to see our website properly: NaN;
+                    Because they can no longer see the default font-size. 
+
+                    They can but their root font-size cannot be affected anymore 
+                    and it will just be 10px no matter what the user has as a 
+                    default font-size
+
+                    This is relaly a bad practice. 
+
+                    This is the reason why we are going to set the overall font-size to percentage: NaN;
+                    Which will translate to the percentage of the font-size given by the browser: NaN;
+                    The default font-size when the user doesn't change anything is 16px.
+
+                    So that is the absolute default. and that is the situation that we 
+                    are counting on here: NaN;
+
+                    If we put 100% this will mean that the root font-size will be 
+                    16px if the user doesn't change anything and if the user 
+                    does change the default font-size 
+
+                    Lets say to 18px, if they change it to 20px then it 
+                    would be 20 and so on and so fort: NaN;
+
+                    We dont want 16px here so what we want is 10px.
+
+                         All we have to do is to divide what we want which is 10 by 16. 
+
+                         10 divide by 16 is 0.625
+
+                         Imagine lets say .625 if the default is 16 like the we have before then this translate to 10px.
+
+                         If the user changes to 20px then our default will be 12.5 .625*20
+
+                         If the user changes to 22px theen .625 * 22 = 13.75
+
+                         So witht this we allowed the user to zoom in on the page automatically not only to change the font-size 
+
+                         but also to zoom in on the page. 
+
+                         NOt exactly zooming but increasing all of the measurements that we have.
+
+                         Make sure that you understand this technique because it is widely used in the CSS developer community. 
+
+                         This is so simple but very powerful: NaN;
+
+                         One thing to be aware of is that rems is not supported below internet explorer 9.%
+                         So if you are about to develop for some old browser the really old browsers rem will not work. 
+
+
+                         Your site will simply not work at all. Since it will apply in this course. If you are interstd in this modern course 
+                         then your probably: NaN;
+
+                         Use the power of inheritance. 
+
+                         Whenver we can use the power of inheritance. We should use it instead of using something like the universal selector: NaN;
+
+                         Remove box-sizing and put it in the body.
+
+                         We set the body to box-sizing borderbox, and hten we do in box-sizing and we use the inherit keyword inside of our
+                         Universal selector. 
+
+                         We use the inherit keyword to force the inheritance. 
+
+                         The box-sizing property by itself is not inherited but by setting the box-sizing inherit property in each every element
+                         on the entire page it will automatically inherit whatever we put here in border-box.
+
+                         This is considered a slightly better practice by the CSS community
+
+                         It makes it a lot easier to change the box-sizing like in the plugins or other components from where
+                         we might want to use a different property for box-sizing. 
+
+                         So it doesn't make a huge difference but its just a slightly better practice. to do the box-sizing borderbox 
+
+                         We should also update the universal reset we can also select all of the after pseudo elements and also all of the 
+                         before pseudo elements because right now only the real elements gets the behavior here: NaN;
+                         but the before and after they dont' get this behavior: NaN;
+                         Since we don't want to see any strange behavior happening so we also want to include these 
+
+                         *,
+                         *::after, *::before{
+                            padding: 0;
+                            margin:0;
+                            box-sizing:inherit;
+
+                         }
+
+
+
+            
+               */
+
+        }
+
+        /*RESPONSIVE CONVERT PX to REM*/
+        body {
+
+            background-color: white;
+            font-family: 'Chewy', cursive;
+            /*font-size: 16px;*/
+            height: 100vh;
+            background-color: #f1eadf;
+
+        }
+
+        @media only screen and (max-width:600px) {
+            body {
+                font-size: 1.2rem;
+                /*12px divide to 10*/
+
+            }
+        }
+
+
+
+        form {
+            position: relative;
+
+        }
+
+        /*   .rbsl {
+            float: left;
+        }*/
+
+        /*  form {
+            width: 25%;
+            border: 3px solid white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 56.4vh;
+            box-shadow: 0 0 10px black;
+            border-radius: 5px;
+
+
+        }*/
+
+        .form__container {
+            width: 25%;
+            border: .3rem solid white;
+            /*3px divide by 10*/
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 34.5rem;
+            /*55.6%*/
+            box-shadow: 0 0 10px black;
+            border-radius: .5rem;
+            /*5px divide by 10*/
+            /*  text-align: center;*/
+        }
+
+        @media only screen and (max-width:600px) {
+            .form__container {
+                width: 75%;
+                height: 33.5rem;
+                /*48.5%*/
+            }
+        }
+
+        .form__signup--div1 {
+            background-color: rgb(16, 84, 211);
+            padding: .3rem;
+            /*3px*/
+            margin: .2rem;
+            /*2px*/
+            height: 33.5rem;
+            /*55%*/
+            border-radius: .5rem;
+            /*5px*/
+            color: white;
+
+
+        }
+
+        @media only screen and (max-width:600px) {
+            .form__signup--div1 {
+                height: 32.5rem;
+                /*60%*/
+                width: 99%;
+                text-align: center;
+
+
+            }
+
+        }
+
+
+
+
+
+        .input-text {
+            border-radius: .5rem;
+            /*5px*/
+            margin: .2rem .5rem .5rem .5rem;
+            /*2px 5px 5px 5px*/
+            padding-left: 0;
+            /*5px*/
+            margin-bottom: 1rem;
+            /*10px*/
+            height: 3rem;
+            width: 14rem;
+            /*30px*/
+        }
+
+        @media only screen and (max-width:600px) {
+            .input-text {
+                /*display:inline-block;*/
+
+                height: 2.5rem;
+                /*25px*/
+                /*text-align: center;*/
+
+            }
+
+            .input-text__firstName {
+                margin: 0;
+               
+            }
+
+
+
+
+            /*.br{
+        display:none;
+    }*/
+
+        }
+
+        .input-text__email {
+            display: inline-block;
+            padding-left: .5rem;
+            /*5px*/
+            margin-left: 3.4rem;
+            /*34px*/
+            margin-bottom: 1rem;
+            /*10px*/
+            width: 26rem;
+            /*80%*/
+
+        }
+
+        @media only screen and (max-width:600px) {
+            .input-text__email {
+                width: 20rem;
+                /*60%*/
+                margin-left: 0;
+            }
+
+        }
+
+
+        #form__input--firstName {
+            border-radius: .5rem;
+            /*5px*/
+            margin: .2rem .5rem .5rem .5rem;
+            /*2px 5px 5px 5px*/
+            padding-left: .5rem;
+            /*5px*/
+            margin-bottom: 1rem;
+            /*10px*/
+            height: 3rem;
+            /*30px*/
+        }
+
+        @media only screen and (max-width:600px) {
+            #form__input--firstName {
+                margin: .2rem .5rem .5rem .5rem;
+                /*2px 5px 5px 5px*/
+            }
+        }
+
+
+
+
+
+
+        #form__input--lastName {
+            border-radius: .5rem;
+            /*5px*/
+            margin: .2rem .5rem .5rem .5rem;
+            /*2px 5px 5px 5px*/
+            padding-left: .5rem;
+            /*5px*/
+            margin-bottom: 1rem;
+            /*10px*/
+            height: 3rem;
+            /*30px*/
+        }
+
+
+
+
+
+
+
+
+
+        /*
+        .first-last-name {
+            font-size: 1rem;
+        }*/
+
+        .btn__container {
+            height: 15%;
+        }
+
+        .cancel-btn {
+            border-radius: 5%;
+            padding: .6rem 3.5rem;
+            /*5px*/
+            margin: 1rem 1rem 1rem 4rem;
+            /*1rem 1rem 1rem 5rem; /*10px 10px 10px 20px*/
+            /* width: 40%;*/
+            cursor: pointer;
+            font-size: 1.2rem;
+            /* display:inline-block;*/
+            border: .2rem solid #fff;
+            background-color: rgb(16, 84, 211);
+
+        }
+
+        @media only screen and (max-width:600px) {
+            .cancel-btn {
+                margin: 0 auto;
+            }
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .signup-btn {
+            border-radius: 5%;
+            border: .2rem solid #fff;
+            padding: .5rem 3rem;
+            /*5px*/
+            margin: 1rem;
+            /*10px*/
+            /* width: 40%; we should not be giving width and height with buttons*/
+            color: white;
+            background-color: rgb(16, 84, 211);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form__container">
+
+        <form action="includes/signup-inc.php" method="POST">
+            <div class="form__signup--div1">
+                <!--HEADING SECTION-->
+                <h1 style="margin-left:5px;">SIGN UP</h1>
+                <p style="margin-left:5px; margin-bottom:2px;">Its quick and easy</p>
+                <hr style="color:white;">
+                <br>
+                <!--SECTION FOR USER INFORMATION-->
+                <input class="input-text input-text__firstName" type="text" placeholder="First Name" name="fname">
+                <input class="input-text" type="text" placeholder="Last Name" name="lname">
+
+                <input class="input-text input-text__email" type="text" placeholder="Enter Email" name="mail"><br>
+
+                <!--SECTION FOR PASSWORD-->
+                <label style="padding-left:8px; " for="psw">Password &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input class="input-text" style="margin-left:19px;margin-bottom:10px;" type="password"
+                        placeholder="Enter Password" id="psw" name="pwd"><br>
+
+                </label>
+
+
+                <!--REPEAT PASSWORD-->
+                <label style="padding-left:8px;" for="psw-repeat">Repeat Password
+                    <input class="input-text" style="margin-left:11px;" type="password" placeholder="Repeat Password"
+                        id="psw-repeat" name="psw-repeat"><br>
+                </label>
+
+
+                <!--SECTION FOR TERMS AND CONDITIONS -->
+                <label for="remember" style="font-size:14px; margin:10px;">
+                    <input id="remember" type="checkbox" checked name="remember" style="margin-bottom:15px;">
+                    Remember me
+                </label>
+                <p style="font-size:12px;margin-bottom: 8px; text-align:center;">
+                    By creating an account you agree to our
+                    <a href="#" style="color:red">Terms & Privacy</a>.</p>
+
+                <!--BUTTON SECTION-->
+
+                <div class="btn__container">
+                    <!--class="clearfix"-->
+                    <a class="cancel-btn" href="index.html">Cancel</a>
+                    <!-- <button type="button" class="cancel-btn"></button>-->
+                    <button type="submit" class="signup-btn" name="submit">Sign Up</button>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+
+
+</body>
+
+</html>

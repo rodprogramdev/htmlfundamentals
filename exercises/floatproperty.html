@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLOAT PROPERTY EXERCISE</title>
+    <style>
+        body {
+            background-color: rgb(252, 140, 158);
+        }
+
+        /*EXAMPLE 1*/
+        .container1 {
+            background-color: #fff;
+            width: 90%;
+            height: 100vh;
+            margin: 0 auto;
+            padding: 20px;
+            /*centering the container*/
+
+        }
+
+        .blue-box {
+            background-color: rgba(0, 0, 255, 0.63);
+            width: 400px;
+            height: 350px;
+            margin-left: 20px;
+            float: right;
+        }
+
+        .red-box {
+            background-color: rgba(255, 0, 0, 0.644);
+            width: 400px;
+            height: 350px;
+            float: left;
+            margin-right: -20px;
+        }
+
+        .ex--1 {
+            background-color: green;
+            clear: both;
+
+        }
+
+        .ex--2 {
+            background-color: yellow;
+            clear: none;
+        }
+
+
+        /*EXAMPLE 2*/
+
+        .container2 {
+            background-color: #fff;
+            width: 90%;
+            height: 100vh;
+            margin: 0 auto;
+            padding: 20px;
+            /*centering the container*/
+
+        }
+
+        .img__batman {
+            width: 300px;
+            height: 200px;
+            float: left;
+            margin-right: 50px;
+            margin-bottom: 20px;
+            /*   opacity: 0.5;*/
+        }
+
+        .img__ironman {
+            width: 300px;
+            height: 200px;
+            float: right;
+            margin-left: 50px;
+        }
+
+        .h3__heroes {
+            clear: both;
+            text-align: center;
+        }
+
+        hr {
+
+            clear: both;
+        }
+
+        /*  .p__hero{
+            background-color:green;
+        }*/
+
+        /*EXAMPLE # 3*/
+        .container3 {
+            background-color: #fff;
+            width: 90%;
+            height: 100vh;
+            margin: 0 auto;
+            padding: 20px;
+            /*centering the container*/
+
+        }
+
+        .box {
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+            height: 100px;
+            width: 100px;
+            /*float:left;*/
+            float: left;
+
+        }
+
+        .box--1 {
+            background-color: rgba(0, 128, 0, 0.623);
+            /* float: right;
+            margin-left:25px;*/
+        }
+
+        .box--2 {
+            background-color: rgba(0, 0, 255, 0.575);
+            /*float:left;
+            margin-left:25px;*/
+        }
+
+        .box--3 {
+            background-color: hotpink;
+            /*float:left;*/
+            clear: both;
+
+
+        }
+
+        .box--4 {
+            background-color: firebrick;
+            clear: both;
+        }
+
+        .box--5 {
+            background-color: magenta;
+            clear: both;
+        }
+
+        /*EXAMPLE 4*/
+        .container4 {
+            background-color: #fff;
+            width: 90%;
+            height: 100vh;
+            margin: 0 auto;
+            padding: 20px;
+            /*centering the container*/
+            text-align: center;
+
+        }
+
+        .services{
+            width: 25%;
+            height: 30%;
+            margin: 2%;
+            padding: 2%;
+            float: left;
+            border: 2px solid rgba(47,74,230, 0.7);
+            box-shadow: 0px 0px 20px rgb(0,0,0,0.5);
+            color: #fff;
+            
+
+        }
+
+        .services--1{
+            background-color:red;
+        }
+        .services--2{
+            background-color: green;
+        }
+        .services--3{
+            background-color:rgb(252, 140, 158);
+        }
+
+        /*EXAMPLE 5*/
+        .container5 {
+            background-color: #fff;
+            width: 90%;
+            height: 100vh;
+            margin: 0 auto;
+            padding: 20px;
+            /*centering the container*/
+            text-align: center;
+
+        }
+        ul{
+            width: 90%; /*allows us to create 3columns*/
+            margin: 1rem auto;
+            border:3px solid red;
+            background-color: peachpuff;
+        }
+
+       /* li:last-child{
+            float:none;
+        }*/
+
+        .clearfix::after{
+            content: "";
+            display: table;
+            clear: both;
+
+        }
+
+        img{
+            width: 300px;
+            height:300px;
+
+        }
+
+        li{
+            list-style-type: none;
+            margin: 10px 2%;
+            float: left;
+        }
+
+        .p--example5{
+            background-color:green;
+           /* clear:both;*/
+        }
+    </style>
+</head>
+
+<body>
+    <h1>FLOAT PROPERTY EXERCISES</h1>
+    <hr />
+    <section>
+        <h2>EXAMPLE#1</h2>
+        <div class="container1">
+            <div class="blue-box">
+                <p class="ex--1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione molestias quasi ad
+                    incidunt voluptatibus accusamus deleniti, similique ut quam quia enim porro voluptas, ea nobis sequi
+                    quisquam dolorum. Doloremque, debitis.</p>
+            </div>
+            <div class="red-box">
+                <p class="ex--2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione molestias quasi ad
+                    incidunt voluptatibus accusamus deleniti, similique ut quam quia enim porro voluptas, ea nobis sequi
+                    quisquam dolorum. Doloremque, debitis.</p>
+            </div>
+
+
+        </div>
+    </section>
+    <hr />
+    <section>
+        <h2>EXAMPLE#2</h2>
+        <div class="container2">
+            <h3 class="h3__heroes">ABOUT US</h3>
+            <img class="img__batman" src="actionvance-n-2_KHgeAy0-unsplash.jpg" alt="Batman">
+            <p class="p__hero">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, quasi impedit hic, optio
+                eum recusandae
+                facilis ipsam cum distinctio fugit consequatur, possimus voluptatum suscipit. Nobis laudantium in vitae
+                autem dolorum.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sunt eum expedita explicabo
+                corrupti laborum dolorem. Blanditiis tempore perferendis cumque labore, corrupti praesentium unde
+                temporibus similique quaerat quam hic! Quod.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum rerum sunt excepturi et eum delectus
+                ducimus, dolor cum, sapiente natus ex. Officia ad voluptatum sunt dolores laboriosam neque magnam
+                placeat.
+            </p>
+            <span>Photo by <a
+                    href="https://unsplash.com/@actionvance?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">ActionVance</a>
+                on <a
+                    href="https://unsplash.com/s/photos/superhero?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+
+            <hr>
+            <h3 class="h3__heroes">OUR SERVICES</h3>
+            <img class="img__ironman" src="marjanblan-ZSE5vGldTPs-unsplash.jpg" alt="Ironman">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, quasi impedit hic, optio eum recusandae
+                facilis ipsam cum distinctio fugit consequatur, possimus voluptatum suscipit. Nobis laudantium in vitae
+                autem dolorum.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sunt eum expedita explicabo
+                corrupti laborum dolorem. Blanditiis tempore perferendis cumque labore, corrupti praesentium unde
+                temporibus similique quaerat quam hic! Quod.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum rerum sunt excepturi et eum delectus
+                ducimus, dolor cum, sapiente natus ex. Officia ad voluptatum sunt dolores laboriosam neque magnam
+                placeat.
+            </p>
+
+            <span>Photo by <a
+                    href="https://unsplash.com/@marjan_blan?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Марьян
+                    Блан | @marjanblan</a> on <a
+                    href="https://unsplash.com/s/photos/superhero?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+        </div>
+    </section>
+    <hr />
+    <section>
+        <h2>EXAMPLE#3</h2>
+        <div class="container3">
+            <div class="box box--1">Box 1</div>
+            <div class="box box--2">Box 2</div>
+            <div class="box box--3">Box 3</div>
+            <div class="box box--4">Box 4</div>
+            <div class="box box--5">Box 5</div>
+        </div>
+    </section>
+    <hr />
+    <section>
+        <h2>EXAMPLE#4</h2>
+        <div class="container4">
+            <h2>OUR SERVICES</h2>
+            <div class="services services--1">
+                <h3>PACKAGE 1</h3>
+                <p>Services offered</p>
+            </div>
+            <div class="services services--2">
+                <h3>PACKAGE 2</h3>
+                <p>Services offered</p>
+            </div>
+            <div class="services services--3">
+                <h3>PACKAGE 3</h3>
+                <p>Services offered</p>
+            </div>
+        </div>
+    </section>
+    <hr />
+    <section>
+        <h2>EXAMPLE#5</h2>
+        <div class="container5">
+            <h3>IMAGE GALLERIES</h3>
+            <ul class="clearfix">
+                <li><img src="../images/floatproperty/Rbslopezphotography--1.JPG" alt="Rbslopezphotos--1"></li>
+                <li><img src="../images/floatproperty/Rbslopezphotography--2.jpg" alt="Rbslopezphotos--2"></li>
+                <li><img src="../images/floatproperty/Rbslopezphotography--3.jpg" alt="Rbslopezphotos--3"></li>
+                <li><img src="../images/floatproperty/Rbslopezphotography--4.jpg" alt="Rbslopezphotos--4"></li>
+                <li><img src="../images/floatproperty/Rbslopezphotography--5.jpg" alt="Rbslopezphotos--5"></li>
+                <li><img src="../images/floatproperty/Rbslopezphotography--6.jpg" alt="Rbslopezphotos--6"></li>
+            </ul>
+            <p class="p--example5">This are my Personal Photos</p>
+            <a href="../index.html">BACK TO HOMEPAGE</a>
+        </div>
+    </section>
+
+</body>
+
+</html>

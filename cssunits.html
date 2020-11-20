@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*We can see here a box that we've created using two div elements
+          We have here the rendering of px. 
+          If we say 200px it will be exactly 200px exactly in our browser here. 
+          we can see 200px and if we apply 100px we can see a smaller box.
+          
+          Lets say we would want to go and create a smaller box with a background
+          yellow 
+
+          One of the most easiest units to use is the percentage unit: NaN;
+
+          Lets apply a height of 50% for our child element. 
+          We would see that we now have a height of 50% for our box that would be 
+          from the top to the middle of the blue box.
+
+          If we put a width of 50% you would see that it will be relative to the 
+          parent element which is a height of 50% and a width of 50%.
+
+          This is quite one of the most easiest way for us to understand on how 
+          the percentage unit can be used as a relative unit. 
+
+          
+          You would see that if we apply 100% of the width it will cover the 
+          blue box 100% width from the left to the right. 
+
+          If we go and try to change the width to 125%, we can see that it is overlapping
+          If we go back and try to give it a 100%.
+
+          Lets say we would want to add a padding of 20px.
+          We would see that it is overlapping. 
+          If we have a paragraph here with some text HELLO WORLD
+          We can see that we have a padding of top, right, bottom, left 
+          
+          If we are experiencing this issue we can maximize the use of the box-sizing 
+          property border box
+          We can see that we still have the padding inside of the yellow box that is 
+          inside of the blue box.
+
+          Absolute lengths are pertaiing to fix length not related to any element
+          Relative lenths are related to another length property.
+
+          It can be through the parent element, declared font 
+          attribute or the viewport dimension of our document. 
+          
+
+        
+        */
+
+            
+
+            .parent{
+                background:blue;
+                height:100px;
+                width: 100px;
+                
+                
+                
+            }
+
+            .child-content{
+                background-color: yellow;
+                height:100px;
+                width: 100px;
+            }
+    </style>
+    
+</head>
+
+<body>
+    <div class="parent">
+        <div class="child">
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

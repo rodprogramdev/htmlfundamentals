@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+
+        In this lesson we will learn and tackle the different css positioining 
+        properties and learn how to position our elements using these
+        property css declarations. 
+
+        Lets first go and do some exercise for us to really get our 
+        hands dirty in coding. 
+
+        So lets create a new file, then use the html template
+
+        Then lets create two sections in our document. 
+
+        Now I would want to create a parent div container. 
+
+        Then create at least 4 child div elements. 
+
+        Lets have a box class that we can use to reference in 
+        giving general styling to all 4 child div elements. 
+
+        Now lets give each child element a specific class names for 
+        specific stylings. 
+
+        
+        Lets make them squares by giving some absolute values in pixels. 
+        Lets have their height and width 150px for each of the boxes. 
+
+    
+
+        The position property will specify the type of positioning 
+        method we can use for an element. 
+
+        It can be static, relative, fixed, absolute, or sticky
+
+        Static Positioning will just follow the normal flow of the document
+        based from how we declared it inside of our html document.
+
+        The elements can be positioned using the top, right, bottom, left properties. 
+        We need to declare the position property first before using these
+        other properties, each of these properties will 
+        work differently depending on the position value we used. 
+
+        Now let open our developer tools and check the default value for our 
+        position property. 
+
+        We will see that the value for the position property is static: NaN;
+
+        This just simply means that the top, right, bottom, left property 
+        declaration will not be affecting the elements when we use this
+        position property. 
+
+        The next property we can talk about is the relative positioning. 
+        This is almost the same as the static property value however, the 
+        only difference is that we can now use the top, bottom, left, right
+        property declarations to move and adjust the element away from its 
+        normal position. 
+
+        The other elements will not be adjusted to fit into the space
+        from where the element with a relative value was declared. 
+
+        That space will be a gap that was left by the element which will be 
+        reserved for that element. 
+
+        Just remember that the relative property will allow you to change
+        the position of the element relative to where it normally would be
+        in the document flow if it was statically positioned. 
+
+        A note to remember here is that we generally don't use the 
+        relative position and then declare the top, bottom, left, and right
+        properties because it becomes really difficult to style things around it. 
+
+        We would see that it will be out of the document flow here if we declare
+        a top of 10px and it overflows to the space being occupied by the child element 2.
+
+        Then we would need to go and try to reposition Child 2 and child 3 and 
+        it can get really confusing if you do this. 
+
+        The next positioning value we can talk about is the position:fixed value. 
+        This will position the element relative to the viewport, this means that it 
+        will always stay in the same place even when the page is scrolled: NaN;
+
+        We can also use the top, right, bottom, and left properties to position 
+        the element using this value. 
+
+        Remember that the fixed element will not leave a gap in the page from where 
+        it would normally have been located. 
+
+        The next one we can talk about here is the absolute position. 
+        This means that the element is going to be positioned relative to the
+        nearest positioned ancestor element. 
+
+        Unlike the position fixed element.
+
+        Position element completely removes the element from the regular flow and the other element
+        renders as if that element doesn't exist at all.
+
+        This will make position absolute very useful if you want to stick an element
+        on a certain position in your document and you don't want anything else to move around it
+
+        It also allows you to use the top, right , bottom, and left property declarations. 
+
+        Just remember that absolute position will be positioning itself inside of soem
+        parent element that it can reference. 
+
+        In our example, it is positioned inside a parent element however, our parent element
+        currently has a value of static which means it cannot have anything else positioned 
+        relatively or absolutely to it. 
+
+        This is the reason why our child 3 element did not referenced our parent container for 
+        its positioin and instead it used the document  body. 
+
+        Now if we want to go and position an element relatively or absolutely to it. 
+
+        We will need to use any of the other positioned elements of either absolute, relative, sticky
+        or fixed in order to make those elements positioned absolutely inside of it. 
+
+
+        Now lets go place a position property of relative to our parent container, this is the most
+        common used case for the position relative. 
+        
+        We can see now that the absolute positioned element is now relative to our parent container. 
+
+        The absolute position property is really useful if we want to position an element inside of 
+        a container. We need to make sure that the parent eleemnt has a position relative declared 
+        inside of it. 
+
+        Otherwise the absolute positioned element will be related to the other positioined element
+        or all the way back to the root element or body of the document. 
+
+        A keynote to remember is that we can use the absolute position element in any other 
+        positioned element declared in a parent element. 
+
+
+        Position Sticky is a combinatino of relative and fixed position
+
+        Lets make child 4 sticky position and give it a top 0px
+
+        We can see that it looks normal just like it is relatively positioned but when we scroll 
+        down and it hits the top of the page. 
+
+        It will become fixed position. As we scroll you will see that it will become fix
+        to the top  of our page with the top 0.
+
+        That is the power of the sticky positioning. 
+
+        By default it is relative and once you scroll your page and hits outside of the page: NaN;
+        It becomes fixed positioned. 
+
+
+        */
+        body{
+            background-color:darksalmon;
+            margin:0;
+            padding: 0;
+        }
+
+        .container-parent{
+            
+            background-color:crimson;
+            height: 90vh;
+            font-size: 20px;
+            padding: 50px;
+            margin: 30px 30px 30px 30px;
+            text-align: center;
+            position:relative;
+            
+        }
+
+        .box{
+            background-color: blue;
+            width: 100px;
+            height: 100%;
+            display: inline-block;
+            
+        }
+
+
+        .box__child1{
+            background-color:darkcyan;
+            height: 150px;
+            width: 150px;
+            /*position: static; default value*/ 
+            
+            
+        }
+
+        .box__child2{
+            background-color:darkkhaki;
+            height:150px;
+            width: 150px;
+          /*  position:fixed;
+            top:0px;*/
+            
+           
+            
+
+        }
+
+        .box__child3{
+            background-color:darkgrey;
+            height:150px;
+            width: 150px;
+            /*position: absolute;
+            top:0px;*/
+           
+
+        }
+
+        .box__child4{
+            background-color:cornsilk;
+            height:150px;
+            width: 150px;
+            /*position:sticky;
+            top:0;*/
+        }
+
+        .about{
+            background-color:darkblue;
+            height: 100vh;
+        }
+
+        h2{
+            text-align:center;
+            padding: 20px;
+            font-size: 50px;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="container-parent">
+            <div class="header"><h1>PARENT ELEMENT-CONTAINER</h1></div> 
+            <div class="box box__child1">CHILD 1 </div>
+            <div class="box box__child2">CHILD 2 </div>
+            <div class="box box__child3">CHILD 3 </div>
+            <div class="box box__child4">CHILD 4 </div>
+        </div>
+        
+    </section>
+    <section>
+        <div class="about">
+            <h2>SECTION 2</h2>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+        width, padding, border, margin
+        For us to understand what the box-model in css is, just remember that everything in css 
+        is a box. Every single element in css is a box either of a rectangular shape or a square. 
+        This boxes have different parts as to what we have previously talked about in our previous
+        lessons.
+The element content will just fill up the space inside of the box when you don nothing to the box at all you would see that the box will be no larger than the content. 
+When we try to add different properties to the box we can expand the size of the box.
+We can make our box bigger by using padding. 
+
+
+We can see that the height and width is 680 x: 180;
+Because this adds the padding and the border values from the top and bottom 
+by default for the height 
+Margin doesn't account to the size of the element 
+by default.
+
+If we want to change this and make 
+the height and width of our element to be the actual
+height and width.
+
+We can use the box-sizing border box
+This will make the height and width account for the 
+padding and the border or our element. 
+
+
+So if we want to 
+ body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+
+*{
+Padding: 0
+margin: 0;
+font-size: 100px;
+
+.First-box{
+    background-color: purple;
+    border: 0 solid red;
+}
+
+add padding 20 px if we save that we know that this will increase our box by 20px on all sides: NaN;
+Everything is pushed away  from our content element. 
+
+.Second-box{
+    background-color: blue;
+    border: 0 solid green;
+}
+        
+        */
+
+        <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+            box-sizing: border-box;   
+
+        }
+
+        .first-box{
+            background-color: blue;
+            height: 100px;
+            width: 600px;
+            padding: 20px;
+            border: 20px solid green;
+            margin: 80px;   
+            font-size: 20px;   
+        }
+
+        /*
+        Padding is usually used for us to add space to background of the element
+        Margin is usually used for us to add space between two elements. 
+        */
+
+        .second-box{
+            background: red;    
+            height: 100px;
+            width: 600px;
+            padding: 20px;
+            border: 20px solid green;
+           margin: 100px;
+            
+        }
+
+
+
+
+            body{
+                margin:0;
+                display:flex;
+                justify-content: center;
+                align-items:center;
+                height: 100vh;
+            }
+
+            .margin{
+                background:rgb(219, 219, 226);
+                padding: 40px;
+                border-style:dashed;
+                height:500px;
+                width: 500px;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                text-align: center;
+                
+                
+            }
+
+            .border{
+                background-color: yellow;
+                border: green solid 50px;
+                height: 400px;
+                width: 400px;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .padding{
+                background-color: red;
+                height: 300px;
+                width: 300px;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+
+
+            }
+
+            .content{
+                background-color: pink;
+                height: 100px;
+                width: 200px;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+
+                
+            }
+    </style>
+    
+</head>
+
+<body>
+    
+    <div class="margin">
+        <div class="border">
+
+            <div class="padding">
+              
+                <div class="content">
+                    Element Content
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

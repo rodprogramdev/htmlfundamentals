@@ -1,0 +1,1491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link href="https://fonts.googleapis.com/css2?family=Butterfly+Kids&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Fruktur&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet"> 
+ <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet"> */
+   -->
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Chewy&display=swap" rel="stylesheet">
+    <title>RBSL's Original Stories</title>
+    <style>
+        /* ONLINE RESOURCES:
+         devDocs.io 
+         CSs default values
+         https://rgbatohex.com/
+        Best Personal Sites for inspiration
+        http://seanhalpin.io/
+        https://www.rhiannonnavin.com/
+        colorhunt.co = website for color combination
+
+        What are the best keywords to use?
+        
+        How do I structure my searches?
+        
+        Which of the following do I want to go to to look 
+        for something that I want to apply in my project: NaN;
+
+        This is the thought process I want you to develop.
+
+        Try to give it a go, trying to look for and seeing if you 
+        can try to figure it out. 
+
+        This is going to become one of the important skills you will need
+        to develop as you become a developer.
+
+        css color data type.
+
+        */
+        body {
+            /*
+            https://www.udemy.com/course/html-fundamentals/
+            font-family: 'Butterfly Kids', cursive;
+            font-size: 30px;
+            font-family: 'Fruktur', cursive;
+            font-family: 'Bowlby One SC', cursive;*/
+            font-family: 'Chewy', cursive;
+            /*  font-family: 'Open Sans', sans-serif;*/
+            /*font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;*/
+            font-size: 20px;
+            /*font-size:18px;*/
+        }
+
+        /* 
+        .text-box{
+            background-image:url(Rod.jpg); 
+            background-repeat:no-repeat; 
+            background-size: cover;
+        }
+        */
+        .header__container {
+            position: relative;
+            height: 10vh;
+            margin-bottom: 25px;
+            /*  background-size: cover;*/
+
+
+        }
+
+        .header__nav {
+            position: fixed;
+            z-index: 1;
+            /*background-color:rgba(195, 0, 255, 0.911);*/
+            /*background-color:rgba(60, 107, 42, 0.603);*/
+            background-color: rgb(16, 84, 211);
+            border: 2px solid white;
+            width: 37.5%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+            border-radius: 12px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /*
+
+        @keyframes moveowl {
+            30% {
+                margin: 20px -20px;
+            }
+
+            50% {
+                margin: 20px;
+            }
+
+
+
+        }*/
+        /*****************************SIGN IN AND LOGIN BUTTONS******************/
+
+        .header__signIn {
+            /*float:right*/
+            position: relative;
+        }
+
+        .header__signIn--ul {
+            margin: 30px 45px 0 10px;
+            position: absolute;
+            top: 20%;
+            left: 75%;
+            width: 20%;
+            /* border: 2px solid white;*/
+            /*   background-color: rgb(16, 84, 211);*/
+            /*  text-align: center;*/
+            /*   border-radius: 12px;*/
+            /*  padding-top:2px;
+            padding-bottom:2px;
+            padding-left: 23px;
+           /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);*/
+        }
+
+        @media only screen and (max-width:600px) {
+            .header__signIn--ul {
+                margin: 30px 15px 0 30px;
+                top: 10%;
+                left: 18%;
+                transform: translateX(-24%);
+                width: 90%;
+            }
+        }
+
+        .header__signIn--li {
+            list-style-type: none;
+            color: white;
+            display: inline;
+            text-align: center;
+            padding-left: 0;
+            padding-right: 20px;
+        }
+
+
+
+        @media only screen and (max-width:600px) {       
+
+            .header__signIn--li {
+                list-style-type: none;
+                color: white;
+                text-align: center;
+
+            }
+        }
+
+        .header__signIn--a1 {
+            border: 2px solid white;
+            border-radius: 8px;
+            text-decoration: none;
+            color: white;
+            background-color: rgb(16, 84, 211);
+            padding-top: 2px;
+            padding-bottom: 2px;
+            padding-left: 20px;
+            padding-right: 23px;
+            text-align: center;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+            transition: all .2s;
+        }
+
+        @media only screen and (max-width:600px) {
+            .header__signIn--a1 {
+                position: relative;
+                top: -30px;
+                left: 20%;
+                margin: -1px;
+                font-size: .80rem;
+            }
+        }
+
+        .header__signIn--a1:hover {
+            transform: translateY(20px);
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.6);
+        }
+
+        .header__signIn--a1:active {
+            transform: translateY(18px);
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
+        }
+
+        .header__signIn--a2 {
+            border: 2px solid white;
+            border-radius: 8px;
+            text-decoration: none;
+            color: white;
+            background-color: rgb(16, 84, 211);
+            padding-top: 2px;
+            padding-bottom: 2px;
+            padding-left: 20px;
+            padding-right: 20px;
+            text-align: center;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+            transition: all .2s;
+        }
+
+        .header__signIn--a2:hover {
+            transform: translateY(20px);
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.6);
+        }
+
+        .header__signIn--a2:active {
+            transform: translateY(18px);
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
+        }
+
+        @media only screen and (max-width:600px) {
+
+            .header__signIn--a2 {
+                position: relative;
+                top: -30px;
+                left: 20%;
+                margin: 1px;
+                font-size: .80rem;
+            }
+
+        }
+
+
+
+
+        .logo-box {
+            position: absolute;
+            /*display: block;*/
+            top: 1%;
+            left: 90%;
+            height: 10px;
+            animation: moveowl 3s infinite;
+            /* background-color: red;*/
+
+        }
+
+        .bird-logo {
+            height: 60px;
+            width: 60px;
+
+        }
+
+        .bird-logo:hover {
+            transition: .2s all;
+            transform: scale(1.5);
+            cursor: pointer;
+        }
+
+        @media only screen and (max-width:600px) {
+            .bird-logo {
+                height: 0;
+                width: 0;
+            }
+
+        }
+
+
+        .header__nav--li {
+            display: inline;
+        }
+
+        /*MEDIA QUERRIES FOR HEADER NAV SECTION*/
+        @media only screen and (max-width:600px) {
+            .header__nav {
+                width: 86%;
+                top: 8%;
+                left: 50%;
+                transform: translate(-50%);
+                margin: 0;
+                text-align: left;
+            }
+
+            ul {
+                margin: 0 auto;
+                margin-bottom: 4px;
+            }
+
+            .header__nav--li {
+                font-size: .85rem;
+                margin: 0;
+                display: inline;
+
+            }
+
+
+        }
+
+
+
+
+
+
+        /*SECTION Text-Box*/
+        /* style=" color:white;  background-color:rgb(9, 5, 75);  padding:25%; */
+
+        .text-box {
+            background-image: url(images/Janine_Michaela_Arts.png);
+            background-size: cover;
+            background-position: 20% 30%;
+            background-attachment: fixed;
+            /*min-height: 10%;*/
+            margin: 0px 50px 40px 50px;
+            border-radius: 20px;
+            border: 10px solid black;
+            /*height: 5vh;*/
+        }
+
+        /*    @media only screen and (max-width:600px){
+            .text-box{
+                margin:0px 10px 30px 20px;
+            }
+        }*/
+
+        @media only screen and (max-width:600px) {
+            .text-box {
+                margin: 0px 0px 0px 0px;
+                border: 10px solid black;
+                border-left: 0;
+                border-right: 0;
+                border-radius: 0;
+            }
+        }
+
+        .text-box__heading {
+            background-color: rgba(16, 84, 211, 0.63);
+            width: 70%;
+
+
+            height: 50%;
+            border: 2px solid white;
+            border-radius: 5px;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        @media only screen and (max-width:600px) {
+            .text-box__heading {
+                top: 20%;
+                left: 50%;
+                height: 20%;
+                margin-top: 8%;
+            }
+        }
+
+
+
+        .text-box__heading--h1 {
+            display: block;
+            padding: 5% 0 0 0;
+            text-align: center;
+            text-shadow: 0 4px 2px rgb(11, 9, 148);
+            font-size: 4rem;
+        }
+
+
+        @media only screen and (max-width:600px) {
+            .text-box__heading--h1 {
+                font-size: 1rem;
+                margin-top: 20px;
+
+            }
+
+        }
+
+        .text-box__heading--span2 {
+            font-size: 1.5rem;
+        }
+
+        @media only screen and (max-width:600px) {
+            .text-box__heading--span2 {
+                font-size: 1rem;
+            }
+        }
+
+        .link-resume {
+            text-decoration: none;
+            color: red;
+            text-shadow: -2px 0px 1px black;
+        }
+
+        .link-resume__span {
+            text-decoration: underline red solid 2px;
+            text-shadow: -2px 0px 1px black;
+            font-size: 1.3rem;
+            padding: 1px;
+
+        }
+
+        /*ABOUT SECTION*/
+
+        .about {
+            padding: 20px 20px;
+            font-size: 18px;
+        }
+
+        @media only screen and (max-width:600px) {
+            .about {
+                font-size: 16px;
+            }
+        }
+
+        .about__img {
+            float: left;
+        }
+
+
+        .about__profile {
+            border-radius: 50%;
+            height: 300px;
+            width: 300px;
+            margin: 60px 50px;
+            border: 2px solid black;
+        }
+
+        @media only screen and (max-width:600px) {
+            .about__profile {
+                height: 250px;
+                width: 250px;
+
+            }
+        }
+
+
+
+
+        /*SECTION CHILDREN STORIES*/
+
+        .primary-heading {
+            position: absolute;
+            background-color: rgb(165, 42, 42);
+            display: inline;
+            text-shadow: 0 4px 2px rgb(11, 9, 148);
+            border-radius: 20px;
+            padding: 20px;
+            top: 5%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+
+        @media only screen and (max-width:600px) {
+            .primary-heading {
+                text-align: center;
+                width: 50%;
+                font-size: 20px;
+                margin-top: 0;
+
+
+            }
+        }
+
+        .childrenStories {
+            position: relative;
+            /*  background-image: url(s-o-c-i-a-l-c-u-t-FluPNkHfCTs-unsplash.jpg);*/
+            background-image: url(Images/mahdiar-mahmoodi-unsplash.jpg);
+            /*<span>Photo by <a href="https://unsplash.com/@mhdr_m?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Mahdiar Mahmoodi</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>*/
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            padding: 150px 20px 100px 20px;
+            height: 130vh;
+
+        }
+
+        @media only screen and (max-width:600px) {
+            .childrenStories {
+                height: 175vh;
+                position: none;
+                padding: 120px 20px;
+            }
+        }
+
+
+        .cards__container--1 {
+
+            position: relative;
+            width: 20%;
+        }
+
+        .image {
+            opacity: 1;
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: .5s ease;
+            backface-visibility: hidden;
+        }
+
+        .original-stories {
+            background-color: rgba(60, 107, 42, 0.603);
+            background-color: rgba(3, 37, 97, 0.938);
+            width: 65%;
+            padding-top: 3px;
+            padding-left: 25px;
+            padding-bottom: 10px;
+            border-radius: 5px;
+            color: white;
+            margin-bottom: 8px;
+        }
+
+        @media only screen and (max-width:600px) {
+            .original-stories {
+                font-size: 14px;
+                width: 90%;
+                margin: 0 auto;
+
+            }
+        }
+
+        aside {
+            /* background-color:rgba(255, 105, 180, 0.507);*/
+            /*background-color:rgba(15, 12, 11, 0.596);*/
+            /*background-color: rgba(90, 142, 151, 0.603);
+            
+            padding-left: 15px
+            font-style:italic;*/
+            background-color: #0f4ec2d8;
+            /*#0f4ec2; /*rgba(16, 84, 211, 0.63);*/
+            text-shadow: 0 0px 4px #ff005b,
+                0 0px 5px #000000;
+            /*rgb(228, 15, 15);*/
+            /* top: 10px;*/
+            width: 30%;
+            float: right;
+            padding-left: 15px;
+            border-radius: 15px;
+            margin-top: 50px;
+
+
+            margin-bottom: 20px;
+            color: white;
+            display: block;
+
+            font-style: italic;
+
+
+        }
+
+        @media only screen and (max-width:600px) {
+            aside {
+                width: 90%;
+                float: none;
+                margin: 2% auto;
+                font-size: 14px;
+                text-shadow: 0 0px 5px #000000;
+                padding: 5px;
+            }
+        }
+
+        /*
+         aside{
+            float:right;
+            width:30%;
+            padding-left:15px;
+            display:block;
+            background-color: rgba(16, 84, 211, 0.63);
+            text-shadow: 0 4px 2px rgb(228, 15, 15);
+            top: 10px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            color: white;
+            margin-top: 40px;
+        }
+
+        .original-stories {
+            background-color: rgba(60, 107, 42, 0.603);
+            background-color: rgba(3, 37, 97, 0.767);
+            width: 65%;
+            padding-left: 25px;
+            padding-bottom: 10px;
+            border-radius: 5px;
+            color: white;
+        }
+        */
+
+        /*SECTION TABLES
+        https://www.w3schools.com/tags/tag_thead.asp
+        https://www.w3schools.com/tags/tag_tbody.asp
+        https://www.w3schools.com/TAGS/tag_tfoot.asp
+        https://developer.mozilla.org/en-US/docs/Web/HTML/Element/thead
+        https://stackoverflow.com/questions/29111522/is-it-required-to-use-thead-tbody-and-tfoot-tags#29111622
+        https://www.w3schools.com/TAGs/tag_th.asp
+        */
+        .section-tables {
+            position: relative;
+            text-align: center;
+
+        }
+
+        .table-container {
+            display: inline-block;
+            width: 90%;
+            padding-bottom: 100px;
+
+        }
+
+
+
+        table {
+
+            background-color: rgb(16, 84, 211);
+            width: 100%;
+            /*background-image: url(images/sophia-kunkel-F84XvXyEYk4-unsplash.jpg);
+        
+            background-size:cover;
+            background-position: center;*/
+            border-radius: 20px;
+            color: white;
+            border: none;
+            border-spacing: 20px;
+
+        }
+
+
+
+        table,
+        td {
+            border: 3px solid black;
+            /*border-collapse: collapse;*/
+            padding: 8px;
+            text-transform: capitalize;
+
+        }
+
+
+        @media only screen and (max-width:600px) {
+
+            table,
+            td {
+                padding: 0px;
+            }
+        }
+
+        td {
+            background-color: brown;
+        }
+
+        @media only screen and (max-width:600px) {
+            td {
+                font-size: 12px;
+            }
+        }
+
+
+        thead {
+            /*box-shadow: 0 0 10px 10px rgb(128, 0, 0);*/
+            /*background-color: rgba(16, 84, 211, 0.63);*/
+            height: 5px;
+            font-size: 30px;
+            text-shadow: 0 0px 4px #eb447e;
+            background-color: darkblue;
+
+        }
+
+        @media only screen and (max-width:600px) {
+            thead {
+                font-size: 16px;
+            }
+        }
+
+        tbody {
+            /*background-color: rgba(33, 19, 85, 0.63);*/
+            background-color: blue;
+
+        }
+
+        .theading1 {
+
+            border: 1px ridge peachpuff;
+            border-width: 5px;
+
+
+        }
+
+        .theading2 {
+            text-shadow: 0 0px 4px rgba(0, 0, 0, 0.726);
+
+
+            padding: 20px;
+            border: 2px ridge peachpuff;
+        }
+
+
+        @media only screen and (max-width:600px) {
+            .theading2 {
+                font-size: 13px;
+                padding: 4px;
+            }
+        }
+
+
+
+
+
+
+
+        /*https://css-tricks.com/examples/hrs/
+        
+        https://codepen.io/ibrahimjabbari/pen/ozinB
+        https://medium.com/@eokinch/unicode-characters-in-html-css-a55c77fd3570
+        
+        https://medium.com/@eokinch/unicode-characters-in-html-css-a55c77fd3570
+        
+        unicode-table.com
+
+
+
+        https://stackoverflow.com/questions/21708823/periods-in-css-selectors?noredirect=1&lq=1
+        span.class.whatever examples
+        */
+
+        hr {
+            border: 3px double red;
+
+        }
+
+        hr.style-1 {
+            border-top: 5px double red;
+            border-right: none;
+            border-bottom: none;
+            /*5px solid red;*/
+            border-left: none;
+
+            /*border-top: 0px single #8c8b8b;*/
+            text-align: center;
+            width: 100%;
+        }
+
+        hr.style-1:after {
+            content: '\231A';
+            /*content: '\002665';*/
+            /* display: inline-block;*/
+            position: relative;
+            top: -23px;
+            /*padding: 0px 0px;
+	background: #f0f0f0;
+	color: #8c8b8b;*/
+            font-size: 28px;
+        }
+
+        p {
+            text-indent: 0px;
+        }
+
+        /*Em is a phrase tag and the i tag is used to display
+        text or content inside of it italic
+        
+        Mat Cutts Google Webmasters SEO
+        B tag and strong tag
+        in terms of SEO
+
+        Both tags have the same effect both have the same 
+        effect. 
+
+        Back then whenever we check the strong and
+        b tag are ranks for SEO or on how they are scored
+        or index.
+
+        B and I have kinda been deprecated but strong and em
+        
+
+        One is more talking about presentation, like telling 
+        the browser to display text in bold and the other one is 
+        telling the browser to give semantic label and treat this 
+        as strong from where the display will just be the same 
+        and it will display the text in bold.
+
+        The short answer is to not worry about it too much,
+
+        as far as we know it would be tretaed the same by google.
+
+Reference
+http://www.velizaratellalyan.com/seo/the-importance-of-bold-and-strong-tags-in-seo/
+        Although they have the same effect, the HTML elements 
+        <b> and <strong> and <i> and <em> are not exactly the same.
+
+    <b> and <i> are used to define bold and italic text, 
+    without any extra importance. Basically they are telling 
+    the browser what the text should look like, without emphasizing its content.
+    <strong> and <em>  are used to define a semantic emphasis.
+        <strong> defines bold text, with added semantic “strong” importance.
+        <em> defines emphasized text, with added semantic importance.
+
+       
+
+        
+        */
+
+        /*SECTION COMMUNITY*/
+        .community {
+            height: 80vh;
+            text-align: center;
+            padding: 50px 50px 50px 0px;
+
+
+
+
+        }
+
+        @media only screen and (max-width:600px) {
+            .community__heading {
+                text-align: center;
+                margin-left: 40px;
+            }
+        }
+
+        .clearfix {
+            content: "";
+            width: 100%;
+            /* background-color: blue;*/
+            clear: both;
+            display: table;
+
+        }
+
+
+
+        .box {
+            float: left;
+            /*   border:1px solid black;*/
+            background-color: white;
+            /*margin: 0 2%;*/
+            height: 300px;
+            width: 300px;
+            list-style-type: none;
+            margin: 1rem 4%;
+            /*margin:2.5rem 2rem;*/
+            border: 2px ridge black;
+
+        }
+
+
+        @media only screen and (max-width:600px) {
+            .box {
+
+                float: left;
+                height: 100px;
+                width: 90%;
+                padding: 2px;
+                text-align: center;
+                margin: 5% 1%;
+                border: 1px ridge black;
+            }
+        }
+
+
+
+        .box:hover {
+            box-shadow: -2px 8px 17px -5px rgba(0, 0, 0, 0.89);
+            cursor: pointer;
+        }
+
+
+
+
+
+        .box--1 {
+            background-image: url(images/rbslopez-photos-website.png);
+            background-size: cover;
+            background-position: left;
+
+
+        }
+
+        @media only screen and (max-width:600px) {
+            .box--1 {
+                background-position: top;
+            }
+        }
+
+
+
+        .box--2 {
+            background-image: url(images/2mbchronicleslogo.jpg);
+            background-size: contain;
+            background-position: 50% 25%;
+            background-repeat: no-repeat;
+
+
+        }
+
+        @media only screen and (max-width:600px) {
+            .box--2 {
+                background-image: url(images/mbcchronicles.png);
+                background-position: 50% 42%;
+                background-size: cover;
+
+            }
+        }
+
+
+        .box--3 {
+            background-image: url(images/sidhaya.jpg);
+            background-size: cover;
+            background-position: bottom;
+            background-repeat: no-repeat;
+        }
+
+
+        @media only screen and (max-width:600px) {
+            .box--3 {
+                background-image: url(images/sidhaya2.jpg);
+                background-position: 15% 42%;
+                background-size: cover;
+            }
+        }
+
+        /***********************************FOOTER SECTION*********************************/
+
+        .footer__container {
+            background-color: rgb(16, 84, 211);
+            height: 40vh;
+            /*         color: #fff;
+            
+            border-radius: 2px;
+            padding: 0;*/
+
+        }
+
+
+        @media only screen and (max-width:600px) {
+            .footer__container {
+                height: 40vh;
+
+            }
+        }
+
+        .footer__heading--2 {
+            padding: 35px 10px 35px 10px;
+            margin: 0px;
+            text-shadow: -3px 3px 4px #00a2ff;
+        }
+
+
+        /* .footer__navigation {
+            position: relative;
+        } */
+
+
+        .footer__list {
+            margin-top: 2rem;
+            float: left;
+            height: 15vh;
+            list-style-type: none;
+
+
+        }
+
+
+        @media only screen and (max-width:600px) {
+            .footer__list {
+                font-size: 12px;
+                /*   align-self: start;*/
+                margin-top: 20px;
+
+            }
+        }
+
+
+        .footer__item {
+            margin-top: 0px;
+            margin-bottom: 5px;
+            text-shadow: -2px 0px 1px rgb(75, 23, 23);
+            display: block;
+        }
+
+
+        .footer__link {
+            text-decoration: none;
+            color: #f7f7f7;
+        }
+
+        .footer__link:hover {
+
+            text-shadow: -1px 0px 1px rgb(3, 240, 3);
+
+
+        }
+
+
+        .footer__heading--4 {
+            display: inline;
+            padding: 1rem 10px 0px 10px;
+
+            text-shadow: -3px 3px 4px rgba(2, 51, 134, 0.938);
+            border-bottom: 2px solid rgb(245, 2, 2);
+
+        }
+
+        @media only screen and (max-width:600px) {
+            .footer__heading--4 {
+                font-size: 12px;
+                padding: 0;
+            }
+        }
+
+
+
+
+        /*
+        .footer__community {
+            float: left;
+            list-style-type: none;
+        }
+
+        @media only screen and (max-width:600px) {
+            .footer__community {
+                font-size: 12px;
+                margin-top: 20px;
+            }
+        }
+
+        .footer__social-media {
+            float: left;
+            list-style-type: none;
+        }
+
+        @media only screen and (max-width:600px) {
+            .footer__social-media {
+                font-size: 12px;
+                margin-top: 20px;
+            }
+        }
+
+        .footer__joinus {
+            float: left;
+            list-style-type: none;
+        }
+
+        @media only screen and (max-width:600px) {
+            .footer__joinus {
+                font-size: 12px;
+                margin-top: 20px;
+            }
+        }
+*/
+        .footer__copyright {
+            padding: 0 25px;
+            text-align: center;
+            margin-top: 3.5rem;
+        }
+
+
+        @media only screen and (max-width:600px) {
+            .footer__copyright {
+                font-size: 12px;
+                position: absolute;
+                margin-top: 130px;
+                left: 50%;
+                transform: translate(-50%);
+                /*z-index: 1;*/
+                width: 80%;
+            }
+        }
+
+        /*
+        .footer__icons {
+            position: absolute;
+            margin-top: 90px;
+            left: 35%;
+
+
+        }
+
+
+        @media only screen and (max-width:600px) {
+            .footer__icons {
+                left: 50%;
+                margin-top: 200px;
+                font-size: 12px;
+                transform: translate(-50%);
+            }
+        }
+
+*/
+    </style>
+</head>
+
+<body style="background-color:#f1eadf;  margin:0px;">
+    <!--rgba(216, 213, 228, 0.63); padding: 20px;"
+    padding:20px 20px 0 20px
+-->
+    <!--THis is the header and the navigation area of the page-->
+    <header>
+        <div class="header__container" id="header" style="padding:10px 10px;">
+            <div class="header__nav" style=" padding: 0px;">
+                <nav>
+                    <ul>
+                        <li class="header__nav--li"><a href="#header" style="color:white;padding: 3px;">Home |</a></li>
+                        <li class="header__nav--li"><a href="#about" style="color:white;padding: 3px;">About |</a></li>
+                        <li class="header__nav--li"><a href="#section-tables" style="color:white;padding: 3px;">Table of
+                                Contents |</a>
+                        </li>
+                        <li class="header__nav--li"><a href="#stories" style="color:white;padding: 3px;"> Stories |</a>
+                        </li>
+                        <li class="header__nav--li"><a href="#footer" style="color:white;padding: 3px;">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+            <div class="header__signIn">
+                <ul class="header__signIn--ul">
+                    <li class="header__signIn--li"><a class="header__signIn--a1" href="signin.html">Sign In</a> </li>
+                    <li class="header__signIn--li"><a class="header__signIn--a2" href="signup.html">Sign Up</a></li>
+                </ul>
+            </div>
+            <!--<div class="logo-box">
+               <img class="bird-logo" src="path919.png" alt="Rod's Image">
+                
+            </div>-->
+        </div>
+
+        <!-- <hr class="style-1">-->
+        <div class="text-box" style=" color:white;  background-color:rgb(9, 5, 75);  padding:25%; ">
+            <div class="text-box__heading">
+                <h1 class="text-box__heading--h1">
+                    <span class="text-box__heading--span1">RBSL's ORIGINAL STORIES</span><br>
+                    <span class="text-box__heading--span2">"A man may die, nations may rise and fall, but an idea lives
+                        on
+                        forever"- John F. Kennedy</span>
+                </h1>
+            </div>
+            <!--Photo by Mahdiar Mahmoodi on Unsplash-->
+        </div>
+        <!--
+        <audio controls>
+           
+            <source src="RodrigoLopez_GuitarRiff.ogg" type="audio/ogg">
+            <source src="RodrigoLopez_GuitarRiff.wav" type="audio/wav">
+            Your browser does not support the audio tag.
+          </audio> -->
+    </header>
+    <!-- <hr  >
+    THis is the main area of page-->
+    <main>
+
+        <!--ABOUT SECTION-->
+        <section class="about" id="about">
+            <div class="about__img">
+                <img class="about__profile" src="Rod.jpg" alt="Rod's Profile">
+                <!-- <video width="320" height="240" controls loop>
+                   <source src="sample-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+               </video>-->
+
+            </div>
+            <h1 style="color:brown; text-align:center;">About me</h1>
+            <p style="text-indent:0; display: block; color:rgb(11, 9, 148);">I am <a
+                    href="../HtmlFundamentals-8/exercises/word-htmlexercise-scroll/resume.html" class="link-resume"
+                    target="_blank"><span class="link-resume__span">Rod</span>rigo Bonzerr S.
+                    Lopez</a> a web designer, musician, composer
+                and I like writing original stories.</p>
+
+            <p style="text-indent:0; display: block; color:rgb(11, 9, 148); ">Writing helps me exercise my innovative
+                skills and taps my innate
+                desire to
+                touch lives using the stories that I write. <br>I also love writing original music and I am a very
+                enthusiastic person who loves learning.
+            </p>
+            <p>I have fifteen years in the field of teaching with experience in creating modules and manuals for
+                trainings in topics
+                such as safety, computer literacy, emergency, and disaster preparedness. I also managed both personal
+                and client Wordpress
+                websites.
+            </p>
+            <p>I am an author of the book "Practical Self-defense 2009", and was a co-author of the book of
+                Grandmaster Frank Soberino, "WEDO Traditional Arnis Secrets". I also have written a free e-book titled
+                "Introduction to
+                Git and Github."
+            </p>
+            <!--
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus maxime temporibus veniam aliquam.
+                Qui quam nostrum eligendi recusandae nulla commodi ducimus temporibus aperiam atque quasi cupiditate
+                cumque, molestias quibusdam itaque.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis, placeat quos, cupiditate at veniam
+                id ipsum,
+                perspiciatis quaerat ab modi qui enim ex. Neque, quaerat nisi consequatur repellat impedit illo.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quaerat nam aperiam molestiae deleniti earum
+                maxime exercitationem soluta, voluptatem totam
+                eum cumque adipisci ut at, dolores quam. Illo, deleniti amet?</p>-->
+        </section>
+        <!--  <hr style="width: 50%;">
+       SECTION TABLES
+        
+        https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table
+
+        https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Basics
+
+        https://www.w3schools.com/html/html_tables.asp
+        https://duckduckgo.com/?q=deprecated+meaning&t=newext&ia=web
+        -->
+        <section class="section-tables" id="section-tables">
+            <div class="table-container">
+                
+                <table>
+                  
+                    <thead>
+                        <tr>
+                            <th class="theading1" colspan="2" style="width: 50%;">STORY AUTHOR</th>
+                            <th class="theading1">ORIGINAL STORIES</th>
+
+                        </tr>
+
+
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th class="theading2">LAST NAME</th>
+                            <th class="theading2">FIRST NAME</th>
+                            <th class="theading2">STORY TITLE</th>
+                        </tr>
+                        <tr>
+                            <td>Lopez</td>
+                            <td>Rodrigo</td>
+                            <td>My Beloved Dog Tiger</td>
+                        </tr>
+                        <tr>
+                            <td>Lopez</td>
+                            <td>Cid</td>
+                            <td>Snarf my Cat</td>
+                        </tr>
+                        <tr>
+                            <td>Lopez</td>
+                            <td>Elcid</td>
+                            <td>Naru The wife of Tiger</td>
+                        </tr>
+                        <tr>
+                            <td>Lopez</td>
+                            <td>Rod</td>
+                            <td>The Jumping Frog</td>
+                        </tr>
+
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+        </section>
+        <!--  <hr>
+       CHILDREN STORIES-->
+        <section class="childrenStories" id="stories">
+            <h1 class="primary-heading">RBSL's ORIGINAL STORIES</h1>
+            <aside>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea aliquam consequuntur repellendus tempora
+                    ipsam quod
+                    aperiam molestiae ullam cumque iste suscipit mollitia sapiente nemo placeat perspiciatis beatae,
+                    sunt alias!
+                    Repellendus. </p>
+            </aside>
+            <article class="original-stories">
+                <h2 class="secondary-heading">My Beloved Dog Tiger</h2>
+
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora totam modi animi excepturi. <br />
+                    Enim ratione fuga, inventore, quo autem vero accusamus consequatur quae nihil facilis possimus
+                    <br />
+                    neque quisquam similique perferendis.</p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga sit, vitae sequi labore
+                    reiciendis<br />
+                    impedit officia maxime! Modi quisquam rerum consequuntur saepe enim hic facilis quaerat,<br />
+                    nisi numquam deserunt soluta!</p>
+
+
+
+
+            </article>
+            <aside>
+                <!--style="display:block; float:right; font-style:italic; width:30%; padding-left:15px;"-->
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea aliquam consequuntur repellendus tempora
+                    ipsam quod aperiam
+                    molestiae ullam cumque iste suscipit mollitia sapiente nemo placeat perspiciatis beatae, sunt alias!
+                    Repellendus.</p>
+            </aside>
+
+            <article class="original-stories">
+                <h2 class="secondary-heading">The Suspicious Boy and his Guyabano Tree</h2>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora totam modi animi excepturi.<br />
+                    Enim ratione fuga, inventore, quo autem vero accusamus consequatur quae nihil facilis possimus<br />
+                    neque quisquam similique perferendis.</p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga sit, vitae sequi labore
+                    reiciendis<br />
+                    impedit officia maxime! Modi quisquam rerum consequuntur saepe enim hic facilis quaerat,<br />
+                    nisi numquam deserunt soluta!</p>
+            </article>
+            <aside>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea aliquam consequuntur repellendus tempora
+                    ipsam quod aperiam
+                    molestiae ullam cumque iste suscipit mollitia sapiente nemo placeat perspiciatis beatae, sunt alias!
+                    Repellendus.
+                </p>
+            </aside>
+            <article class="original-stories">
+
+                <h2 class="secondary-heading">Snarf my Cat</h2>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora totam modi animi excepturi.<br />
+                    Enim ratione fuga, inventore, quo autem vero accusamus consequatur quae nihil facilis possimus<br />
+                    neque quisquam similique perferendis.</p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga sit, vitae sequi labore
+                    reiciendis<br />
+                    impedit officia maxime! Modi quisquam rerum consequuntur saepe enim hic facilis quaerat,<br />
+                    nisi numquam deserunt soluta!</p>
+            </article>
+            <div class="span" style="display:flex; justify-content: center; align-items: center;">
+                <!--<span style="text-shadow: 0 4px 2px  rgb(226, 26, 26);" >Photo by <a
+                        href="https://unsplash.com/@socialcut?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
+                        mahdiar-mahmoodi</a> on <a
+                        href="/s/photos/stories?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+-->
+                <span style="text-shadow: 0 4px 2px  rgb(226, 26, 26);">Photo by <a
+                        href="https://unsplash.com/@mhdr_m?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Mahdiar
+                        Mahmoodi</a> on <a
+                        href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+            </div>
+            <!--  .photo-credit__span{
+                position:absolute;
+                top:95%;
+                left:50%;
+                transform: translateX(-50%);
+                
+            }-->
+
+
+        </section>
+
+    </main><br>
+    <!--   <hr>
+    CARD IMAGES-->
+    <section class="cards">
+        <!--
+        <div class="cards__container">
+            <div class="cards__container--1">
+                <<img src="Rod.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                    <div class="text">John Doe</div>
+                </div>>
+            </div>
+            
+        </div>
+        
+        <blockquote></blockquote>-->
+
+        <blockquote style="border-left: 5px solid rgb(23, 35, 199); padding-left: 10px;">
+            <p><strong>Working on a story?<br />
+                </strong>&#8220;Being a story teller opens up the opportunity for the imagination
+                to work wonders
+                for others. I highly recommend you start using that
+                keyboard or pen to share your story to the
+                world.&#8221;
+                - <em>Rodrigo Bonzerr S. Lopez</em> <br>
+                <br>
+                &#8220;Your book &amp; story is another persons door to opportunities to learn
+                and journey to becoming the best versions of themselves!!
+                Be a writer, story teller, &amp; help change lives!!!&#8221;
+                -<em>Rodrigo Bonzerr S. Lopez</em></p>
+        </blockquote>
+    </section>
+
+    <section>
+        <div class="community">
+            <div class="community__container">
+                <h2 class="community__heading" style="color:brown;">COMMUNITY PARTNERS</h2>
+                <ul class="clearfix">
+                    <li class="box box--1"></li>
+                    <li class="box box--2"></li>
+                    <li class="box box--3"><a href="https://www.reverbnation.com/SIDHAYA" target="_blank"></a></li>
+                </ul>
+                <!--
+                <div class="box box--1"></div>
+                 <div class="box box--2"></div>
+                 <div class="box box--3"></div>-->
+            </div>
+        </div>
+    </section>
+    <!--<hr>-->
+
+    <footer style="color:#fff;text-align:center;background-color:rgb(9, 5, 75);" id="footer">
+        <!--style="padding: 35px 10px 35px 10px ; margin:0px; text-shadow: -3px 3px 4px #00a2ffc4;"-->
+        <h2 class="footer__heading--2">RBSL'S Original
+            Stories</h2>
+        <div class="footer__container">
+            <!-- style=" height: 40vh;color:#fff;background-color:rgb(16, 84, 211); border-radius: 2px; padding:0;"-->
+            <!--  <div>
+                <nav>
+                    <ul>
+                        <li class="header__list" id=""><a href="#header" style="color:white;padding: 3px;">Home |</a>
+                        </li>
+                        <li class="header__list"><a href="#about" style="color:white;padding: 3px;">About |</a></li>
+                        <li class="header__list"><a href="#section-table" style="color:white;padding: 3px;">Table of
+                                Contents |</a>
+                        </li>
+                        <li class="header__list"><a href="#stories" style="color:white;padding: 3px;">My Original
+                                Stories |</a>
+                        </li>
+                        <li class="header__list"><a href="#contact" style="color:white;padding: 3px;">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div></div>
+            <div></div>-->
+            <div class="footer__navigation">
+
+
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <h4 class="footer__heading--4">GET TO KNOW US</h4>
+                    </li>
+                    <li class="footer__item"><a class="footer__link" href="#">About us</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Contact Us</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Careers</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Gift Cards</a></li>
+                </ul>
+
+
+                <ul class="footer__list">
+                    <!--class="footer__community"-->
+                    <li class="footer__item">
+                        <h4 class="footer__heading--4">COMMUNITY</h4>
+                    </li>
+                    <li class="footer__item"><a class="footer__link" href="#">Events</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Forums</a></li>
+                </ul>
+                <ul class="footer__list">
+                    <!--class="footer__social-media"-->
+                    <li class="footer__item">
+                        <h4 class="footer__heading--4">SOCIAL MEDIA</h4>
+                    </li>
+                    <li class="footer__item"><a class="footer__link" href="#">Instagram</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Facebook</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Twitter</a></li>
+                </ul>
+                <ul class="footer__list">
+                    <!--class="footer__joinus"-->
+                    <li class="footer__item">
+                        <h4 class="footer__heading--4">JOIN US</h4>
+                    </li>
+                    <li class="footer__item"><a class="footer__link" href="signin.html">Sign In</a></li>
+                    <li class="footer__item"><a class="footer__link" href="signup.html">Sign Up</a></li>
+                </ul>
+
+                <!--
+                    <form action="/action_page.php">
+                        <label for="fname">First name:</label><br>
+                        <input type="text" id="fname" name="fname" value="Rodrigo"
+                            style="border-radius: 10px; padding:2px 15px 2px 15px;"><br>
+                        <label for="lname">Last name:</label><br>
+                        <input type="text" id="lname" name="lname" value="Lopez"
+                            style="border-radius: 10px; padding:2px 15px 2px 15px;"><br><br>
+                        <input type="submit" value="Submit" style="border-radius:5px; padding:5px 20px;">
+                    </form>
+                -->
+
+            </div>
+            <br>
+            <div class="footer__copyright">
+                <!--style="padding:0 25px ; text-align:center;"-->
+                <p>&copy;2020 Rodrigo Bonzerr S. Lopez, <br> It is completely ok for you
+                    to use this as one of your project portfolio,<br> giving credit to the original
+                    author would be highly appreciated.
+
+                </p>
+            </div>
+
+            <!--
+            <div class="footer__icons">
+                THIS IS WHERE I WILL PUT SOCIAL MEDIA ICONS
+            </div>-->
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
