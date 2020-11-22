@@ -60,6 +60,17 @@
             background-size: cover;
         }
         */
+        header{
+            background-image: url(images/pexels-lina-kivaka-1741231.jpg);
+            background-size: cover;
+            background-position: 0% 300%;  
+            /* background-color:rgb(16, 172, 211); */
+            /* height: 100vh; */
+            
+            /* */
+
+        } 
+        
         .header__container {
             position: relative;
             height: 10vh;
@@ -71,6 +82,7 @@
 
         .header__nav {
             position: fixed;
+            top:3%;
             z-index: 1;
             /*background-color:rgba(195, 0, 255, 0.911);*/
             /*background-color:rgba(60, 107, 42, 0.603);*/
@@ -100,6 +112,7 @@
 
         }*/
         /*****************************SIGN IN AND LOGIN BUTTONS******************/
+        
 
         .header__signIn {
             /*float:right*/
@@ -265,6 +278,8 @@
         }
 
         /*MEDIA QUERRIES FOR HEADER NAV SECTION*/
+
+      
         @media only screen and (max-width:600px) {
             .header__nav {
                 width: 86%;
@@ -303,11 +318,12 @@
             background-size: cover;
             background-position: 20% 30%;
             background-attachment: fixed;
-            /*min-height: 10%;*/
-            margin: 0px 50px 40px 50px;
-            border-radius: 20px;
-            border: 10px solid black;
+       
+            /* margin: 0px 50px 40px 50px; */
+            /* border-radius: 20px; */
+            /* border: 10px solid black; */ 
             /*height: 5vh;*/
+                 /*min-height: 10%;*/
         }
 
         /*    @media only screen and (max-width:600px){
@@ -985,6 +1001,32 @@ http://www.velizaratellalyan.com/seo/the-importance-of-bold-and-strong-tags-in-s
 
         }
 
+        .footer__paragraph--2{
+            margin-top:3.5rem;
+            font-size: 1rem;
+        }
+
+        @media only screen and (max-width:600px) {
+            .footer__paragraph--2{
+            margin-top:.5rem;
+        }
+    
+        }
+
+
+        .footer__photo-link {
+            text-decoration: none;
+            color: #f7f7f7;
+            
+        }
+
+        .footer__photo-link:hover {
+
+            text-shadow: -1px 0px 1px rgb(3, 240, 3);
+
+
+        }
+
 
         .footer__heading--4 {
             display: inline;
@@ -1120,7 +1162,7 @@ http://www.velizaratellalyan.com/seo/the-importance-of-bold-and-strong-tags-in-s
         </div>
 
         <!-- <hr class="style-1">-->
-        <div class="text-box" style=" color:white;  background-color:rgb(9, 5, 75);  padding:25%; ">
+       <div class="text-box" style=" color:white;  background-color:rgb(9, 5, 75);  padding:25%; ">
             <div class="text-box__heading">
                 <h1 class="text-box__heading--h1">
                     <span class="text-box__heading--span1">RBSL's ORIGINAL STORIES</span><br>
@@ -1129,8 +1171,10 @@ http://www.velizaratellalyan.com/seo/the-importance-of-bold-and-strong-tags-in-s
                         forever"- John F. Kennedy</span>
                 </h1>
             </div>
-            <!--Photo by Mahdiar Mahmoodi on Unsplash-->
+           <!-- Photo by Mahdiar Mahmoodi on Unsplash -->
         </div>
+       
+        
         <!--
         <audio controls>
            
@@ -1474,8 +1518,10 @@ http://www.velizaratellalyan.com/seo/the-importance-of-bold-and-strong-tags-in-s
                 <p>&copy;2020 Rodrigo Bonzerr S. Lopez, <br> It is completely ok for you
                     to use this as one of your project portfolio,<br> giving credit to the original
                     author would be highly appreciated.
-
+                    
                 </p>
+              
+                <p class="footer__paragraph--2"><a class="footer__photo-link" href="https://www.pexels.com/photo/woman-reading-book-to-toddler-1741231/">Photo banner by Lina Kivaka from Pexels</a></p>
             </div>
 
             <!--
