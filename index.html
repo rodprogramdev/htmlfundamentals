@@ -314,7 +314,10 @@
         /* style=" color:white;  background-color:rgb(9, 5, 75);  padding:25%; */
 
         .text-box {
-            background-image: url(images/Janine_Michaela_Arts.png);
+            background-image: /*linear-gradient(to right bottom,
+           rgba(13, 119, 240, 0.733),
+            rgba(21, 195, 226, 0.26)),  */
+            url(images/Janine_Michaela_Arts.png);
             background-size: cover;
             background-position: 20% 30%;
             background-attachment: fixed;
@@ -344,12 +347,16 @@
 
         .text-box__heading {
             background-color: rgba(16, 84, 211, 0.63);
-            width: 70%;
-
+            border: 2px solid white;
+            
+           /* line-height: 0.6; */
+/*
 
             height: 50%;
             border: 2px solid white;
-            border-radius: 5px;
+            border-radius: 5px; */
+            border-radius: 50%;
+            width: 70%;
             position: absolute;
             top: 40%;
             left: 50%;
@@ -362,6 +369,11 @@
                 left: 50%;
                 height: 20%;
                 margin-top: 8%;
+                border-radius: 5px;
+                border: 2px solid white;
+                line-height: none;
+                width: 90%;
+                
             }
         }
 
@@ -373,25 +385,30 @@
             text-align: center;
             text-shadow: 0 4px 2px rgb(11, 9, 148);
             font-size: 4rem;
+            line-height: 75%;
+            
         }
 
 
         @media only screen and (max-width:600px) {
             .text-box__heading--h1 {
-                font-size: 1rem;
+                font-size: 1.8rem;
                 margin-top: 20px;
-
+                line-height: 105%;
             }
 
         }
 
         .text-box__heading--span2 {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
+            display:inline-block;
+           
         }
 
         @media only screen and (max-width:600px) {
             .text-box__heading--span2 {
-                font-size: 1rem;
+                font-size: .8rem;
+               
             }
         }
 
@@ -1165,7 +1182,7 @@ http://www.velizaratellalyan.com/seo/the-importance-of-bold-and-strong-tags-in-s
        <div class="text-box" style=" color:white;  background-color:rgb(9, 5, 75);  padding:25%; ">
             <div class="text-box__heading">
                 <h1 class="text-box__heading--h1">
-                    <span class="text-box__heading--span1">RBSL's ORIGINAL STORIES</span><br>
+                    <span class="text-box__heading--span1">RBSL's ORIGINAL STORIES</span>
                     <span class="text-box__heading--span2">"A man may die, nations may rise and fall, but an idea lives
                         on
                         forever"- John F. Kennedy</span>
