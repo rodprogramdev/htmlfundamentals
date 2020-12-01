@@ -60,29 +60,71 @@
             background-size: cover;
         }
         */
-        header{
-            background-image: url(images/pexels-lina-kivaka-1741231.jpg);
+        header {
+            /* height: 20vh; */
+            height: 100vh;
+            /* background-image: url(images/pexels-lina-kivaka-1741231-banner.jpg);
+            
             background-size: cover;
-            background-position: 0% 300%;  
+            background-position: 0% 100%; */
+            /* background-position: 0% 300%; */
             /* background-color:rgb(16, 172, 211); */
             /* height: 100vh; */
-            
+
             /* */
 
-        } 
-        
+        }
+
+        /* @media only screen and (max-width:768px) {
+            header {
+                background-size: cover;
+                height: 10vh;
+                background-image: url(images/pexels-lina-kivaka-1741231-banner-ipad.jpg);      
+                background-repeat: no-repeat;
+                background-position: 5% 40%;
+
+               
+            }
+        } */
+
+
+        @media only screen and (max-width:768px) {
+            header{
+                height: 50vh;
+            }
+        }
+
+
+
         .header__container {
+            background-image: url(images/pexels-lina-kivaka-1741231-banner.jpg);
+
+            background-size: cover;
+            background-position: 0% 100%;
             position: relative;
-            height: 10vh;
-            margin-bottom: 25px;
+            height: 15vh;
+            /* margin-bottom: 25px; */
             /*  background-size: cover;*/
 
 
         }
 
+        @media only screen and (max-width:768px) {
+            .header__container {
+                height: 10vh;
+            }
+        }
+
+        @media only screen and (max-width:600px) {
+            .header__container {
+                height: 15vh;
+                background-position: 65% 300%;
+            }
+        }
+
         .header__nav {
             position: fixed;
-            top:3%;
+            top: 3%;
             z-index: 1;
             /*background-color:rgba(195, 0, 255, 0.911);*/
             /*background-color:rgba(60, 107, 42, 0.603);*/
@@ -92,6 +134,14 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
             border-radius: 12px;
         }
+
+
+        @media only screen and (max-width:768px) {
+            .header__nav {
+                width: 64.5%;
+            }
+        }
+
 
         a {
             text-decoration: none;
@@ -112,12 +162,14 @@
 
         }*/
         /*****************************SIGN IN AND LOGIN BUTTONS******************/
-        
+
 
         .header__signIn {
             /*float:right*/
             position: relative;
+
         }
+
 
         .header__signIn--ul {
             margin: 30px 45px 0 10px;
@@ -135,13 +187,25 @@
            /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);*/
         }
 
+        @media only screen and (max-width:768px) {
+            .header__signIn--ul {
+                padding: 1.5% 0;
+                width: 25%;
+                top: 15%;
+                left: 70%;
+                text-align: center;
+            }
+        }
+
+
         @media only screen and (max-width:600px) {
             .header__signIn--ul {
                 margin: 30px 15px 0 30px;
                 top: 10%;
                 left: 18%;
                 transform: translateX(-24%);
-                width: 90%;
+                width: 50%;
+
             }
         }
 
@@ -156,7 +220,7 @@
 
 
 
-        @media only screen and (max-width:600px) {       
+        @media only screen and (max-width:600px) {
 
             .header__signIn--li {
                 list-style-type: none;
@@ -164,6 +228,18 @@
                 text-align: center;
 
             }
+        }
+
+
+        @media only screen and (max-width:768px) {
+            .header__signIn--li {
+                /* background-color:red; */
+                height: 100%;
+                margin: 5% 0;
+                padding: 15% 0;
+                width: 100%;
+            }
+
         }
 
         .header__signIn--a1 {
@@ -181,6 +257,19 @@
             transition: all .2s;
         }
 
+        @media only screen and (max-width:768px) {
+            .header__signIn--a1 {
+                padding-left: 18px;
+                font-size: 1rem;
+                border-radius: 8px;
+            }
+
+            .header__signIn--a1:hover {
+                transform: translateY(20px);
+                box-shadow: 0 5px 5px rgba(0, 0, 0, 0.6);
+            }
+        }
+
         @media only screen and (max-width:600px) {
             .header__signIn--a1 {
                 position: relative;
@@ -193,7 +282,8 @@
 
         .header__signIn--a1:hover {
             transform: translateY(20px);
-            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.6);
+            /* box-shadow: 0 5px 5px rgba(0, 0, 0, 0.6); */
+            box-shadow: 0 5px 5px rgba(233, 8, 8, 0.938);
         }
 
         .header__signIn--a1:active {
@@ -218,13 +308,27 @@
 
         .header__signIn--a2:hover {
             transform: translateY(20px);
-            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 5px 5px rgba(233, 8, 8, 0.938);
         }
 
         .header__signIn--a2:active {
             transform: translateY(18px);
             box-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
         }
+
+        @media only screen and (max-width:768px) {
+            .header__signIn--a2 {
+                padding-left: 18px;
+                /* margin-top: 15%; */
+                font-size: 1rem;
+                border-radius: 8px;
+
+            }
+
+
+        }
+
+
 
         @media only screen and (max-width:600px) {
 
@@ -275,11 +379,13 @@
 
         .header__nav--li {
             display: inline;
+
         }
 
         /*MEDIA QUERRIES FOR HEADER NAV SECTION*/
 
-      
+
+
         @media only screen and (max-width:600px) {
             .header__nav {
                 width: 86%;
@@ -314,19 +420,22 @@
         /* style=" color:white;  background-color:rgb(9, 5, 75);  padding:25%; */
 
         .text-box {
-            background-image: /*linear-gradient(to right bottom,
+            padding: 23%;
+            background-image:
+                /*linear-gradient(to right bottom,
            rgba(13, 119, 240, 0.733),
             rgba(21, 195, 226, 0.26)),  */
-            url(images/Janine_Michaela_Arts.png);
+                url(images/Janine_Michaela_Arts.png);
             background-size: cover;
             background-position: 20% 30%;
             background-attachment: fixed;
-       
+            /* height: 5%; */
             /* margin: 0px 50px 40px 50px; */
             /* border-radius: 20px; */
-            /* border: 10px solid black; */ 
+            /* border: 10px solid black; */
             /*height: 5vh;*/
-                 /*min-height: 10%;*/
+            /*min-height: 10%;*/
+
         }
 
         /*    @media only screen and (max-width:600px){
@@ -338,19 +447,20 @@
         @media only screen and (max-width:600px) {
             .text-box {
                 margin: 0px 0px 0px 0px;
-                border: 10px solid black;
+                border: 2px solid black;
                 border-left: 0;
                 border-right: 0;
                 border-radius: 0;
+                padding: 26%;
             }
         }
 
         .text-box__heading {
             background-color: rgba(16, 84, 211, 0.63);
             border: 2px solid white;
-            
-           /* line-height: 0.6; */
-/*
+
+            /* line-height: 0.6; */
+            /*
 
             height: 50%;
             border: 2px solid white;
@@ -358,16 +468,24 @@
             border-radius: 50%;
             width: 70%;
             position: absolute;
-            top: 40%;
+            top: 42%;
             left: 50%;
             transform: translateX(-50%);
-            animation: wave 5s;
+            animation: fade 5s;
         }
 
-        @keyframes wave {
-            0% {opacity: 0};
-            
-            100% {opacity: 1};
+        @keyframes fade {
+            0% {
+                opacity: 0
+            }
+
+            ;
+
+            100% {
+                opacity: 1
+            }
+
+            ;
 
         }
 
@@ -381,7 +499,7 @@
                 border: 2px solid white;
                 line-height: none;
                 width: 90%;
-                
+
             }
         }
 
@@ -394,7 +512,7 @@
             text-shadow: 0 4px 2px rgb(11, 9, 148);
             font-size: 4rem;
             line-height: 75%;
-            
+
         }
 
 
@@ -409,14 +527,14 @@
 
         .text-box__heading--span2 {
             font-size: 1.2rem;
-            display:inline-block;
-           
+            display: inline-block;
+
         }
 
         @media only screen and (max-width:600px) {
             .text-box__heading--span2 {
                 font-size: .8rem;
-               
+
             }
         }
 
@@ -439,6 +557,13 @@
         .about {
             padding: 20px 20px;
             font-size: 18px;
+            margin: 5% 0 0 0;
+        }
+
+        @media only screen and (max-width:768px) {
+            .about {
+                margin: 0 0 0 0;
+            }
         }
 
         @media only screen and (max-width:600px) {
@@ -1026,23 +1151,23 @@ http://www.velizaratellalyan.com/seo/the-importance-of-bold-and-strong-tags-in-s
 
         }
 
-        .footer__paragraph--2{
-            margin-top:3.5rem;
+        .footer__paragraph--2 {
+            margin-top: 3.5rem;
             font-size: 1rem;
         }
 
         @media only screen and (max-width:600px) {
-            .footer__paragraph--2{
-            margin-top:.5rem;
-        }
-    
+            .footer__paragraph--2 {
+                margin-top: .5rem;
+            }
+
         }
 
 
         .footer__photo-link {
             text-decoration: none;
             color: #f7f7f7;
-            
+
         }
 
         .footer__photo-link:hover {
@@ -1187,7 +1312,7 @@ http://www.velizaratellalyan.com/seo/the-importance-of-bold-and-strong-tags-in-s
         </div>
 
         <!-- <hr class="style-1">-->
-       <div class="text-box" style=" color:white;  background-color:rgb(9, 5, 75);  padding:25%; ">
+        <div class="text-box" style=" color:white;  background-color:rgb(9, 5, 75);  ">
             <div class="text-box__heading">
                 <h1 class="text-box__heading--h1">
                     <span class="text-box__heading--span1">RBSL's ORIGINAL STORIES</span>
@@ -1196,10 +1321,10 @@ http://www.velizaratellalyan.com/seo/the-importance-of-bold-and-strong-tags-in-s
                         forever"- John F. Kennedy</span>
                 </h1>
             </div>
-           <!-- Photo by Mahdiar Mahmoodi on Unsplash -->
+            <!-- Photo by Mahdiar Mahmoodi on Unsplash -->
         </div>
-       
-        
+
+
         <!--
         <audio controls>
            
@@ -1268,10 +1393,14 @@ http://www.velizaratellalyan.com/seo/the-importance-of-bold-and-strong-tags-in-s
         https://duckduckgo.com/?q=deprecated+meaning&t=newext&ia=web
         -->
         <section class="section-tables" id="section-tables">
+           
             <div class="table-container">
+                <br />
                 
+                <h2 style="color:brown; text-align:center;">Table of Contents</h2>
+
                 <table>
-                  
+
                     <thead>
                         <tr>
                             <th class="theading1" colspan="2" style="width: 50%;">STORY AUTHOR</th>
@@ -1543,10 +1672,12 @@ http://www.velizaratellalyan.com/seo/the-importance-of-bold-and-strong-tags-in-s
                 <p>&copy;2020 Rodrigo Bonzerr S. Lopez, <br> It is completely ok for you
                     to use this as one of your project portfolio,<br> giving credit to the original
                     author would be highly appreciated.
-                    
+
                 </p>
-              
-                <p class="footer__paragraph--2"><a class="footer__photo-link" href="https://www.pexels.com/photo/woman-reading-book-to-toddler-1741231/">Photo banner by Lina Kivaka from Pexels</a></p>
+
+                <p class="footer__paragraph--2"><a class="footer__photo-link"
+                        href="https://www.pexels.com/photo/woman-reading-book-to-toddler-1741231/">Photo banner by Lina
+                        Kivaka from Pexels</a></p>
             </div>
 
             <!--
